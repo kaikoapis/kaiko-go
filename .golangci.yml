@@ -1,0 +1,14 @@
+run:
+  timeout: 5m
+  modules-download-mode: readonly
+linters:
+  enable-all: true
+  disable:
+    - exhaustivestruct
+    - golint
+    - interfacer
+    - lll
+    - maligned
+    - scopelint
+
+issues:
