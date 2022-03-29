@@ -2,7 +2,6 @@ package clientv1
 
 import (
 	"google.golang.org/grpc"
-
 	"kaiko.com/go/client/v1/internal"
 )
 
