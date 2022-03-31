@@ -20,7 +20,7 @@ jobs:
             ~/Library/Caches/go-build
           restore-keys: |
             ${{ runner.os }}-go-${{ matrix.go-version }}-
-      - uses: golangci/golangci-lint-action@v2
+      - uses: golangci/golangci-lint-action@v3.1.0
         with:
           skip-build-cache: true
           skip-go-installation: true
