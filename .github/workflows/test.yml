@@ -1,6 +1,6 @@
 concurrency:
   cancel-in-progress: true
-  group: test-${{ github.event.pull_request.number || github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
 
 jobs:
   test:
@@ -20,7 +20,7 @@ jobs:
             ~/Library/Caches/go-build
           restore-keys: |
             ${{ runner.os }}-go-${{ matrix.go-version }}-
-      - run: >-
+      - run: |
           go test
             -count=1
             -covermode=atomic
