@@ -1,6 +1,6 @@
 concurrency:
   cancel-in-progress: true
-  group: golangci-lint-${{ github.event.pull_request.number || github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
 
 jobs:
   golangci-lint:
